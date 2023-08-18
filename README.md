@@ -163,8 +163,9 @@ Un ejemplo de la ejecución de un spec desde el runner de Cypress, se puede obse
 <div id='autores'/>
 
 ##  ✍️️ Autores [📚](#menu)️ 
-**QC Automation / Analyst**
-  * 👨🏻‍💻 hcuenca8@gmail.com
+**QC Automation / Analyst Testing**
+<br>**👨🏻‍💻 Hector Fabio Cuenca Madrid** - hcuenca8@gmail.com
+<br>https://www.linkedin.com/in/hector-fabio-cuenca-madrid-3078591b9/
 
 <br>
 
