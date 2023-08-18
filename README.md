@@ -1,6 +1,6 @@
 # 🦾 Automatización de Pruebas API - Demoblaze 🦾
 
-Este proyecto de automatizacion API hecho en JavaScript/NodeJS-npm con Cypress y Screenplay-pattern, 
+Este proyecto de automatizacion API hecho en JavaScript-NodeJS/npm con Cypress y Screenplay-pattern, 
 refleja los scripts de pruebas automatizadas sobre diferentes servicios API para su consumo desde www.demoblaze.com
 
 <br>
