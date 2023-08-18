@@ -87,13 +87,12 @@ Para mas información, visite:
 | Proposito                  | Tecnologias        | Herramientas                |
 |----------------------------|--------------------|-----------------------------|
 | Pruebas Automatizadas      | Cypress            | Serenity-BDD                |
-| Interprete Automatizacion  | Driver             | chrome-driver               |
 | Pruebas                    | Mocha, Chai        |                             |
 | Lenguaje de programación   | JavaScript         |                             |
 | Gestor de dependencias     | NodeJS             | npm                         |
 | Versionamiento             | Git                | GitHub, GUI/Bash            |
 | IDE                        |                    | VSCode                      |
-| Localizadores              | DOM, CSS selectors | dev tools browser, chropath |
+| Request details            | dev tools browser  | Network, Console            |
 
 
 <br>
@@ -102,7 +101,7 @@ Para mas información, visite:
 
 ## 📋 Pre requisitos - local [📚](#menu) 
 
-1. Node Js v20.5.0
+1. NodeJS v20.5.0
 2. npm v9.8.0
 3. Cypress v12.17.3
 4. IDE Visal Studio Code
