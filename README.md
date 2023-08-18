@@ -115,12 +115,11 @@ Para mas información, visite:
 ## 📦 Instalación [📚](#menu)
 
 1. Clonar/descargar proyecto
-    * Via HTTPS:
+* Via HTTPS:
 ```
 git clone https://github.com/hcuenca8/test-aut-api-demoblaze.git
 ```
-
-    * Via SSH:
+* Via SSH:
 ```
 git clone git@github.com:hcuenca8/test-aut-api-demoblaze.git
 ```
