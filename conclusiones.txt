@@ -1,0 +1,61 @@
+CONCLUSIONES DEL ESCENARIO DE PRUEBA AUTOMATIZADO:
+
+* Una vez ejecutada la prueba automatizada
+* y apreciando los resultados presentados por el runner de Cypress
+
+* Se ejecutan los servicios API relacionados con el registro (signup) y acceso (login/signin) de una cuenta en el portal demoblaze
+	- Registro (signup)
+		- HP: Crear una cuenta, exitosamente
+		- AP: Crear una cuenta, ya existente
+	- Acceso (login/signin)	
+		- HP: Acceder a una cuenta, exitosamente
+		- AP: Acceder a una cuenta, con credenciales no correspondientes
+
+* Dentro del resumen tecnico de La prueba
+    - se implementan, ejecutan y analizan los escenarios solicitados
+		- se hace necesario implementar comportamientos aleatorios ante los casos de cuentas creadas, para no usar una cuenta constante, que solo funcionaria por primera vez
+    - se recupera y complementa el detalle del API, a traves de las devs tools del browser, 
+		- Encontrando el detalle de los servicios consumidos (endpoint, method, headers/body request)
+		- Se detecta envio de codificacion en base64 del password
+    - todos los casos pasan segun las asserciones y/o los comportamientos esperados
+    - Se pueden observar las evidencias a mayor detalle (paso a paso)
+        dentro del runner de Cypress
+
+* Pendientes (To Do):
+	- Proponer un informe de facil portabilidad para analizar/compartir los resultados a otros actores por fuera del equipo de pruebas
+    - Es conveniente ampliar el conjunto de datos de prueba
+        - replanteando el script para manejar data-driven-test
+        - una alternativa es utilizar el apartado de fixtures de Cypress para alojar data organizada en .json, .csv, .xlsx, que despues pueda ser enlazada dentro de la ejecucion de los test iterativamente
+		
+    - Es conveniniente tener un enfoque E2E en el comportamiento de las API, para que un registro de cuenta exitoso, se compruebe a traves del login, y un login exitoso, parta de un registro de cuenta nuevo 
+
+	
+Hallazgos al realizar pruebas exploratorias con Postman:
+
+	- Escalar al equipo tecnico, un riesgo de seguridad ante el tratamiento de password de las cuentas 
+		- enmascara la clave bajo una codificacion base64, pero esto no es un cifrado, 
+			- cualquier interceptor (Man-In-the-Middle) podria capturar esta informacion y decodificarla 
+				- usando cualquier herramienta online de codificacion,
+		- Se sugiere utilizar mecanismos de seguridad mas confiables 
+			- como cifrados de llave publica/privada u otros algoritmos recomendados
+
+	- El catalogo de APIs evaluado, no cumple con el estandar minimo de status code, ante excepciones controladas, emite un codigo 200 (exitosa), con un mensaje de error ante estas situaciones
+		- Esto puede dificultar las integraciones a futuro con otros sistemas, que esperan un comportamiento minimo estandar en los protocolos de respuesta
+	
+	- Las respuestas de las APIs arrojan información mas de la necesaria, haciendo que un atacante recopile informacion acerca de la existencia de usuarios por ejemplo
+	
+
+CONCLUSIONES DE LA PRUEBA TECNICA:
+
+El ejercicio planteaba una automatizacion API a traves de 2 tecnologias Cypress o Karate
+
+* No hay tecnologia/herramienta mejor que otra, lo que se debe buscar es la que mejor se ADAPTE al contexto
+ - asi como las pruebas dependen del contexto, la seleccion de las tecnologias/herramientas tambien
+
+
+
+SEGUN EL CONTEXTO:
+
+* Mi experiencia en API testing es con Rest-Asurred en funcion de Serenity-bdd, al no estar sugerida como parte del ejercicio, elegi Cypress al contar con experiencia en JavaScript y haber interactuado con la tecnologia para automatizaciones Web E2E
+
+* De momento desconozco Karate, seria muy agradable experimentar y conocer acerca de el, mi trayectoria tambien como Sr Backend Developer juega a mi favor, con variedad de Skills tecnicos que me permiten ser muy versatil y adaptarme facilmente a cualquier tecnologia/lenguaje/herramienta
